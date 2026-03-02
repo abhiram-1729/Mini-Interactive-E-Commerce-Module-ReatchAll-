@@ -1,9 +1,5 @@
 # 🛍️ MiniStore - Professional MERN E-Commerce Platform
 
-## 🎥 Project Demonstration
-![MiniStore Demo](images/recording.mp4)
-
----
 
 MiniStore is a modern, full-stack e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js). It features a premium "Glassmorphism" design system, professional loading states, and a robust backend architecture.
 
@@ -11,11 +7,11 @@ MiniStore is a modern, full-stack e-commerce application built with the MERN sta
 
 | Homepage | Product Details |
 |----------|-----------------|
-| ![Homepage](images/product%20page.png) | ![Details](images/product-detailed%20page.png) |
+| ![Homepage](images/homepage.png) | ![Details](images/productdetail.png) |
 
 | Cart Management | Authentication |
 |-----------------|----------------|
-| ![Cart](images/cart%20page.png) | ![Login](images/login%20page.png) |
+| ![Cart](images/cart.png) | ![Login](images/login.png) |
 
 
 ## ✨ Key Features
