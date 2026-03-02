@@ -68,11 +68,11 @@ MiniStore is a modern, full-stack e-commerce application built with the MERN sta
 
 3. **Install Dependencies**
    ```bash
-   # Root/Frontend
+   # Frontend part
    npm install
 
-   # Backend
-   cd server
+   # Backend part
+   cd server/
    npm install
    ```
 
