@@ -212,7 +212,7 @@ const products = [
         price: 1299,
         category: 'Electronics',
         stock: 85,
-        image: 'https://images.unsplash.com/photo-1609592424085-f55a15993e3b?w=500&auto=format&fit=crop&q=60'
+        image: 'https://images.pexels.com/photos/16814787/pexels-photo-16814787.jpeg'
     },
     {
         name: 'Yoga Blocks (Set of 2)',
