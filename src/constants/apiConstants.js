@@ -5,7 +5,6 @@ export const PRODUCT_CATEGORIES = [
     'Apparel',
     'Electronics',
     'Accessories',
-    'Food & Beverage',
     'Footwear',
     'Fitness',
     'Home & Living'

@@ -3,9 +3,21 @@ import ProductCard from '../components/product/ProductCard';
 import { ProductCardSkeleton } from '../components/common/Skeleton';
 import { useCart } from '../context/CartContext';
 import { useProducts } from '../context/ProductContext';
-import { Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Loader2, ChevronLeft, ChevronRight, Layers, Shirt, Cpu, ShoppingBag, Coffee, Footprints, Dumbbell, Home as HomeIcon, SlidersHorizontal } from 'lucide-react';
 
 import { PRODUCT_CATEGORIES } from '../constants/apiConstants';
+
+const CATEGORY_ICONS = {
+    'All': Layers,
+    'Apparel': Shirt,
+    'Electronics': Cpu,
+    'Accessories': ShoppingBag,
+    'Food & Beverage': Coffee,
+    'Footwear': Footprints,
+    'Fitness': Dumbbell,
+    'Home & Living': HomeIcon,
+};
+
 
 const Home = ({ searchTerm }) => {
     const { products, loading, page, pages, count, category, setPage, setCategory, fetchProducts } = useProducts();
@@ -35,24 +47,38 @@ const Home = ({ searchTerm }) => {
 
     return (
         <div className="container py-4 fade-in">
-            <header className="page-header">
-                <h1>Our Products</h1>
-                <p>{loading ? 'Finding items...' : `${count} items found`}</p>
-            </header>
+            <div className="page-header">
+                <div className="page-header-left">
+                    <h1>Our Products</h1>
+                    <span className="items-found-badge">
+                        {loading ? 'Finding...' : `${count} items`}
+                    </span>
+                </div>
+                <div className="page-header-right">
+                    <SlidersHorizontal size={16} />
+                    <span>Filter by category</span>
+                </div>
+            </div>
 
             <div className="filters-section">
                 <div className="category-filters">
-                    {categories.map(cat => (
-                        <button
-                            key={cat}
-                            className={`filter-btn ${category === cat || (cat === 'All' && !category) ? 'active' : ''}`}
-                            onClick={() => handleCategoryChange(cat)}
-                        >
-                            {cat}
-                        </button>
-                    ))}
+                    {categories.map(cat => {
+                        const Icon = CATEGORY_ICONS[cat] || Layers;
+                        const isActive = category === cat || (cat === 'All' && !category);
+                        return (
+                            <button
+                                key={cat}
+                                className={`filter-btn ${isActive ? 'active' : ''}`}
+                                onClick={() => handleCategoryChange(cat)}
+                            >
+                                <Icon size={14} />
+                                <span>{cat}</span>
+                            </button>
+                        );
+                    })}
                 </div>
             </div>
+
 
             {loading ? (
                 <div className="product-grid">

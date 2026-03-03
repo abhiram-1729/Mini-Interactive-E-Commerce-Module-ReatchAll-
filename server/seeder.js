@@ -100,7 +100,7 @@ const products = [
         price: 1200,
         category: 'Fitness',
         stock: 80,
-        image: 'https://images.unsplash.com/photo-1601925228245-7cf43dbfe75a?w=500&auto=format&fit=crop&q=60'
+        image: 'https://images.unsplash.com/photo-1637157216470-d92cd2edb2e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
         name: 'Dumbbell Set',
@@ -108,7 +108,7 @@ const products = [
         price: 2499,
         category: 'Fitness',
         stock: 20,
-        image: 'https://images.unsplash.com/photo-1585152068212-14cf525d24d0?w=500&auto=format&fit=crop&q=60'
+        image: 'https://plus.unsplash.com/premium_photo-1723773734089-a896ee701eef?q=80&w=2765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
         name: 'Mechanical Keyboard',
@@ -204,7 +204,7 @@ const products = [
         price: 599,
         category: 'Home & Living',
         stock: 110,
-        image: 'https://images.unsplash.com/photo-1603006905003-be475513b19b?w=500&auto=format&fit=crop&q=60'
+        image: 'https://plus.unsplash.com/premium_photo-1671534312576-845be6898618?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
         name: 'Portable Power Bank',
@@ -244,7 +244,7 @@ const products = [
         price: 1199,
         category: 'Home & Living',
         stock: 120,
-        image: 'https://images.unsplash.com/photo-1584100936595-c0654b50a9f2?w=500&auto=format&fit=crop&q=60'
+        image: 'https://plus.unsplash.com/premium_photo-1739612423035-4d3b7a34ea39?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
         name: 'Silk Sleep Mask',
@@ -260,7 +260,7 @@ const products = [
         price: 1850,
         category: 'Home & Living',
         stock: 60,
-        image: 'https://images.unsplash.com/photo-1616489953149-8d7697e08960?w=500&auto=format&fit=crop&q=60'
+        image: 'https://plus.unsplash.com/premium_photo-1683121918741-4fc54b7f5ede?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     },
     {
         name: 'Gold-Plated Stationery',
@@ -324,7 +324,7 @@ const products = [
         price: 2100,
         category: 'Accessories',
         stock: 55,
-        image: 'https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?w=500&auto=format&fit=crop&q=60'
+        image: 'https://m.media-amazon.com/images/I/41VFNh7dryL._SY300_SX300_QL70_FMwebp_.jpg'
     },
     {
         name: 'Italian Leather Belt',
@@ -332,7 +332,7 @@ const products = [
         price: 1999,
         category: 'Accessories',
         stock: 75,
-        image: 'https://images.unsplash.com/photo-1624222247344-550fb805bb2a?w=500&auto=format&fit=crop&q=60'
+        image: 'https://m.media-amazon.com/images/I/416TGddUuSL._AC_UL640_FMwebp_QL65_.jpg'
     },
     {
         name: 'Crystal Wine Glasses',
@@ -348,7 +348,7 @@ const products = [
         price: 1550,
         category: 'Food & Beverage',
         stock: 80,
-        image: 'https://images.unsplash.com/photo-1474978528675-4a50a4508815?w=500&auto=format&fit=crop&q=60'
+        image: 'https://m.media-amazon.com/images/I/61pl1SrE0FL._SY879_.jpg'
     },
     {
         name: 'Solid Oak Cutting Board',
@@ -356,7 +356,7 @@ const products = [
         price: 3600,
         category: 'Home & Living',
         stock: 22,
-        image: 'https://images.unsplash.com/photo-1584282305373-c1f61884485e?w=500&auto=format&fit=crop&q=60'
+        image: 'https://m.media-amazon.com/images/I/41EYkBmip0L._AC_UL640_FMwebp_QL65_.jpg'
     },
     {
         name: 'Copper Cocktail Shaker',
@@ -396,7 +396,7 @@ const products = [
         price: 24999,
         category: 'Electronics',
         stock: 8,
-        image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?w=500&auto=format&fit=crop&q=60'
+        image: 'https://m.media-amazon.com/images/I/71drOx2anhL._AC_UY436_FMwebp_QL65_.jpg'
     },
     {
         name: 'Wool Yoga Blanket',
