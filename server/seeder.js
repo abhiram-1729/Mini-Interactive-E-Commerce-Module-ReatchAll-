@@ -28,7 +28,7 @@ const products = [
         price: 999,
         category: 'Apparel',
         stock: 100,
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVlJTIwc2hpcnR8ZW58MHx8MHx8fDA%3D'
+        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Wireless Bluetooth Headphones',
@@ -36,7 +36,7 @@ const products = [
         price: 4999,
         category: 'Electronics',
         stock: 50,
-        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D'
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Leather Minimalist Wallet',
@@ -44,7 +44,7 @@ const products = [
         price: 1299,
         category: 'Accessories',
         stock: 30,
-        image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbGV0fGVufDB8fDB8fHww'
+        image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Organic Green Tea',
@@ -52,7 +52,7 @@ const products = [
         price: 450,
         category: 'Food & Beverage',
         stock: 200,
-        image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW4lMjB0ZWF8ZW58MHx8MHx8fDA%3D'
+        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Running Sneakers',
@@ -60,7 +60,7 @@ const products = [
         price: 2999,
         category: 'Footwear',
         stock: 40,
-        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8fDA%3D'
+        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Smartphone Pro Max',
@@ -68,7 +68,7 @@ const products = [
         price: 69999,
         category: 'Electronics',
         stock: 15,
-        image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhvbmV8ZW58MHx8MHx8fDA%3D'
+        image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Classic Denim Jacket',
@@ -76,7 +76,7 @@ const products = [
         price: 1899,
         category: 'Apparel',
         stock: 60,
-        image: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZGVuaW0lMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D'
+        image: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Premium Coffee Beans',
@@ -84,7 +84,7 @@ const products = [
         price: 650,
         category: 'Food & Beverage',
         stock: 120,
-        image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlJTIwYmVhbnN8ZW58MHx8MHx8fDA%3D'
+        image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Polarized Sunglasses',
@@ -92,7 +92,7 @@ const products = [
         price: 1599,
         category: 'Accessories',
         stock: 45,
-        image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VuZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D'
+        image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Yoga Mat',
@@ -100,7 +100,7 @@ const products = [
         price: 1200,
         category: 'Fitness',
         stock: 80,
-        image: 'https://plus.unsplash.com/premium_photo-1674675646706-8468e673b74a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        image: 'https://images.unsplash.com/photo-1601925228245-7cf43dbfe75a?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Dumbbell Set',
@@ -108,7 +108,7 @@ const products = [
         price: 2499,
         category: 'Fitness',
         stock: 20,
-        image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHVtYmJlbGxzfGVufDB8fDB8fHww'
+        image: 'https://images.unsplash.com/photo-1585152068212-14cf525d24d0?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Mechanical Keyboard',
@@ -148,7 +148,7 @@ const products = [
         price: 2999,
         category: 'Electronics',
         stock: 50,
-        image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60'
+        image: 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Stainless Steel Water Bottle',
@@ -156,7 +156,7 @@ const products = [
         price: 899,
         category: 'Accessories',
         stock: 150,
-        image: 'https://plus.unsplash.com/premium_photo-1681284938505-62efa3494bf2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Gourmet Dark Chocolate',
@@ -180,7 +180,7 @@ const products = [
         price: 399,
         category: 'Home & Living',
         stock: 70,
-        image: 'https://images.unsplash.com/photo-1446071103084-c257b5f70672?w=500&auto=format&fit=crop&q=60'
+        image: 'https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Memory Foam Pillow',
@@ -188,7 +188,7 @@ const products = [
         price: 1299,
         category: 'Home & Living',
         stock: 45,
-        image: 'https://images.unsplash.com/photo-1632127271816-9f44ce97d86f?w=500&auto=format&fit=crop&q=60'
+        image: 'https://images.unsplash.com/photo-1631016800696-5ea8801b3c2a?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Travel Backpack',
@@ -212,7 +212,7 @@ const products = [
         price: 1299,
         category: 'Electronics',
         stock: 85,
-        image: 'https://images.pexels.com/photos/16814787/pexels-photo-16814787.jpeg'
+        image: 'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Yoga Blocks (Set of 2)',
@@ -220,7 +220,7 @@ const products = [
         price: 799,
         category: 'Fitness',
         stock: 65,
-        image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRodI68ArnrSvMYWQ4S2V59bOl8dcmjCYLS6pXmgoIiwUDr8t2z6Yn6K2VjGlmSZiRTE5CQb5GHNSn_gHOUk09nOasbM4TXxvSZJanqFrcEZaequjY_DYOSDjo'
+        image: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=500&auto=format&fit=crop&q=60'
     },
     {
         name: 'Canvas Wall Art',
@@ -229,6 +229,190 @@ const products = [
         category: 'Home & Living',
         stock: 20,
         image: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Luxury Scented Diffuser',
+        description: 'Elite essential oil diffuser with ambient lighting and ultra-quiet operation.',
+        price: 3499,
+        category: 'Home & Living',
+        stock: 50,
+        image: 'https://images.unsplash.com/photo-1602928321679-560bb453f190?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Velvet Throw Pillow',
+        description: 'Ultra-soft premium velvet pillow for a touch of luxury in any room.',
+        price: 1199,
+        category: 'Home & Living',
+        stock: 120,
+        image: 'https://images.unsplash.com/photo-1584100936595-c0654b50a9f2?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Silk Sleep Mask',
+        description: '100% pure mulberry silk mask for the ultimate restorative sleep.',
+        price: 899,
+        category: 'Accessories',
+        stock: 200,
+        image: 'https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Marble Coaster Set',
+        description: 'Set of 4 hand-polished Italian marble coasters with non-slip backing.',
+        price: 1850,
+        category: 'Home & Living',
+        stock: 60,
+        image: 'https://images.unsplash.com/photo-1616489953149-8d7697e08960?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Gold-Plated Stationery',
+        description: 'Set of luxury pens and clips plated in 18k gold for the executive desk.',
+        price: 2999,
+        category: 'Accessories',
+        stock: 35,
+        image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Artisanal Honey Set',
+        description: 'Three rare wildflower honeys harvested from sustainable high-altitude hives.',
+        price: 1250,
+        category: 'Food & Beverage',
+        stock: 90,
+        image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Premium Matcha Whisk',
+        description: 'Handcrafted bamboo whisk (Chasen) for the perfect cup of ceremonial matcha.',
+        price: 750,
+        category: 'Food & Beverage',
+        stock: 150,
+        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Leather Desk Mat',
+        description: 'Full-grain leather surface for superior mouse tracking and desk elegance.',
+        price: 4500,
+        category: 'Electronics',
+        stock: 25,
+        image: 'https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Designer Table Lamp',
+        description: 'Sleek mid-century modern lamp with warm LED glow and copper finish.',
+        price: 6800,
+        category: 'Home & Living',
+        stock: 12,
+        image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Hand-Blown Glass Vase',
+        description: 'Individually crafted artistic vase with deep sapphire and gold swirls.',
+        price: 3200,
+        category: 'Home & Living',
+        stock: 18,
+        image: 'https://images.unsplash.com/photo-1471086569966-db3eebc25a59?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Cashmere Scarf',
+        description: 'Incredibly soft and warm 100% Mongolian cashmere in charcoal grey.',
+        price: 5499,
+        category: 'Apparel',
+        stock: 40,
+        image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Silver-Plated Photo Frame',
+        description: 'Classic tarnish-resistant sterling silver frame for your most cherished memories.',
+        price: 2100,
+        category: 'Accessories',
+        stock: 55,
+        image: 'https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Italian Leather Belt',
+        description: 'Hand-dyed brown leather belt with a brushed nickel buckle.',
+        price: 1999,
+        category: 'Accessories',
+        stock: 75,
+        image: 'https://images.unsplash.com/photo-1624222247344-550fb805bb2a?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Crystal Wine Glasses',
+        description: 'Set of 2 lead-free crystal glasses for the perfect wine experience.',
+        price: 2800,
+        category: 'Food & Beverage',
+        stock: 30,
+        image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Gourmet Truffle Oil',
+        description: 'Cold-pressed extra virgin olive oil infused with rare white truffles.',
+        price: 1550,
+        category: 'Food & Beverage',
+        stock: 80,
+        image: 'https://images.unsplash.com/photo-1474978528675-4a50a4508815?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Solid Oak Cutting Board',
+        description: 'Thick end-grain oak board for serious chefs. Naturally antimicrobial.',
+        price: 3600,
+        category: 'Home & Living',
+        stock: 22,
+        image: 'https://images.unsplash.com/photo-1584282305373-c1f61884485e?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Copper Cocktail Shaker',
+        description: 'Professional grade weighted shaker with a brilliant hammered copper finish.',
+        price: 2200,
+        category: 'Accessories',
+        stock: 45,
+        image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Linen Bedding Set',
+        description: 'Breathable stonewashed French linen duvet cover and pillowcases.',
+        price: 12500,
+        category: 'Home & Living',
+        stock: 10,
+        image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Artisanal Soap Set',
+        description: 'Three artisanal bars formulated with shea butter and exotic botanicals.',
+        price: 950,
+        category: 'Accessories',
+        stock: 100,
+        image: 'https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Minimalist Wall Clock',
+        description: 'Silent quartz movement with a clean white face and natural wood frame.',
+        price: 2750,
+        category: 'Home & Living',
+        stock: 35,
+        image: 'https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Espresso Machine Pro',
+        description: 'Compact professional espresso machine for the ultimate home barista.',
+        price: 24999,
+        category: 'Electronics',
+        stock: 8,
+        image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Wool Yoga Blanket',
+        description: 'Authentic hand-woven wool blanket for comfort during meditation.',
+        price: 1600,
+        category: 'Fitness',
+        stock: 55,
+        image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+        name: 'Suede Loafers',
+        description: 'Premium soft suede loafers with cushioned soles for elegant comfort.',
+        price: 4999,
+        category: 'Footwear',
+        stock: 28,
+        image: 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=500&auto=format&fit=crop&q=60'
     }
 ];
 

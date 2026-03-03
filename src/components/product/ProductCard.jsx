@@ -50,7 +50,7 @@ const ProductCard = ({ product, onAddToCart }) => {
                         ) : (
                             <Plus size={18} />
                         )}
-                        {adding ? 'Adding...' : 'Add to Cart'}
+                        {adding ? 'Adding...' : 'Cart'}
                     </button>
                 </div>
                 {product.stock < 10 && product.stock > 0 && (
