@@ -67,12 +67,21 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const clearCart = async () => {
+        try {
+            await api.clearCart();
+            setCartItems([]);
+        } catch (error) {
+            console.error('Error clearing cart:', error);
+        }
+    };
+
     useEffect(() => {
         fetchCart();
     }, [userInfo]);
 
     const cartTotal = cartItems.reduce((acc, item) => acc + (item.totalPrice), 0);
-    const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCount = cartItems.length;
 
     return (
         <CartContext.Provider value={{
@@ -81,6 +90,7 @@ export const CartProvider = ({ children }) => {
             addToCart,
             removeFromCart,
             updateQuantity,
+            clearCart,
             cartTotal,
             cartCount,
             refreshCart: fetchCart

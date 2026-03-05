@@ -63,3 +63,14 @@ export const removeFromCart = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+// @desc    Clear cart
+// @route   DELETE /api/cart
+// @access  Private
+export const clearCart = async (req, res) => {
+    try {
+        await Cart.deleteMany({ user: req.user._id });
+        res.json({ message: 'Cart cleared' });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};

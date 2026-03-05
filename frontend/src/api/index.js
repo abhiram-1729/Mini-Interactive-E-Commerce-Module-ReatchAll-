@@ -11,6 +11,7 @@ export const getProductById = (id) => api.get(`/products/${id}`);
 export const getCart = () => api.get('/cart');
 export const addToCart = (productId, quantity) => api.post('/cart', { productId, quantity });
 export const removeFromCart = (id) => api.delete(`/cart/${id}`);
+export const clearCart = () => api.delete('/cart');
 
 // Auth
 export const login = (email, password) => api.post('/users/login', { email, password });

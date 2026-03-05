@@ -5,7 +5,7 @@ import { CartItemSkeleton } from '../components/common/Skeleton';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-    const { cartItems, loading, removeFromCart, updateQuantity, cartTotal } = useCart();
+    const { cartItems, loading, removeFromCart, updateQuantity, clearCart, cartTotal } = useCart();
 
     if (loading) {
         return (
@@ -37,7 +37,8 @@ const Cart = () => {
         );
     }
 
-    const handlePlaceOrder = () => {
+    const handlePlaceOrder = async () => {
+        await clearCart();
         alert('Order placed successfully! Thank you for shopping with us.');
     };
 
