@@ -60,7 +60,7 @@ const products = [
         price: 2999,
         category: 'Footwear',
         stock: 40,
-        image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQzHleavKWzxn_eh-_2r_Iu_VqrT8vM1nMJdN39NpBOVqcs-2Jvj-fpYZCd5Z3s2r2OHBfIJwBvOOC2wQjWtfGHhK797ox9QACsHNIU_vzEqpyMWd8Z8geySHg'
+        image: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQlGaORWupb728PHsNE3PH4ta4pxonog4VCDn1zgNLakRblpvSwMTRJKALI7PmBcUHVwwI4dX8EkTl1Q-Bilw9yJdfEQ-PNLdvS92hM9M8nRD_-YUHRs_WeTQ'
     },
     {
         name: 'Smartphone Pro Max',
