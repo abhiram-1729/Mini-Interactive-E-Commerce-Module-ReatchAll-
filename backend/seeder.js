@@ -28,7 +28,7 @@ const products = [
         price: 999,
         category: 'Apparel',
         stock: 100,
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop&q=60'
+        image: 'https://www.jackjones.in/cdn/shop/files/902146301_g0_c1663387-117c-427c-a849-e984fa95fd2d.jpg?v=1758867845&width=2048'
     },
     {
         name: 'Wireless Bluetooth Headphones',
@@ -36,7 +36,7 @@ const products = [
         price: 4999,
         category: 'Electronics',
         stock: 50,
-        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60'
+        image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRSmJobvogMUfkcyzgEHF_w6hAijuYnE-XQ2ywyXOUJAQJ0zJR15pyllXWrBDuR0uoaFJLdu9iNjJDTaUTjgHQl661X4_hM'
     },
     {
         name: 'Leather Minimalist Wallet',
@@ -44,7 +44,7 @@ const products = [
         price: 1299,
         category: 'Accessories',
         stock: 30,
-        image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&auto=format&fit=crop&q=60'
+        image: 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQceCDxkuU0fLxSyf7CtSIBEmezyZI-u2sLEc3I9eQ22Cf0N5DhYypqFd13UzKwnf-3WfVUPCHlMURhFl51WlaiT_-cPJZUmakAgDvbRcjihG5nMUwQ9eWTtyQ'
     },
     {
         name: 'Organic Green Tea',
@@ -60,7 +60,7 @@ const products = [
         price: 2999,
         category: 'Footwear',
         stock: 40,
-        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60'
+        image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQzHleavKWzxn_eh-_2r_Iu_VqrT8vM1nMJdN39NpBOVqcs-2Jvj-fpYZCd5Z3s2r2OHBfIJwBvOOC2wQjWtfGHhK797ox9QACsHNIU_vzEqpyMWd8Z8geySHg'
     },
     {
         name: 'Smartphone Pro Max',
@@ -68,7 +68,7 @@ const products = [
         price: 69999,
         category: 'Electronics',
         stock: 15,
-        image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&auto=format&fit=crop&q=60'
+        image: 'https://s3bg.cashify.in/gpro/uploads/2022/04/18140303/samsung-galaxy-s24-5g-back-1.webp'
     },
     {
         name: 'Classic Denim Jacket',
