@@ -94,4 +94,4 @@ MiniStore is a modern, full-stack e-commerce application built with the MERN sta
 - `src/context`: Global state management for Auth, Cart, and Products.
 
 ---
-*Built with ❤️ by Abhiram Rangoon.*
+* Built with ❤️ and developed by Abhiram Rangoon.*
