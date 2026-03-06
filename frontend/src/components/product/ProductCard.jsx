@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { Plus, Loader2, ExternalLink } from 'lucide-react';
+import { Plus, Loader2, ExternalLink, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product, onAddToCart }) => {
     const [adding, setAdding] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
 
     const handleAddToCart = async (e) => {
-        e.preventDefault(); // Prevent navigation if button is inside Link (though we'll structure it outside)
+        e.preventDefault();
         setAdding(true);
         try {
             await onAddToCart(product._id);
+            setShowSuccess(true);
+            setTimeout(() => setShowSuccess(false), 2000);
         } finally {
             setAdding(false);
         }
@@ -41,16 +44,18 @@ const ProductCard = ({ product, onAddToCart }) => {
                 <div className="product-footer">
                     <span className="price">Rs.{product.price}</span>
                     <button
-                        className="add-btn"
+                        className={`add-btn ${showSuccess ? 'added' : ''}`}
                         onClick={handleAddToCart}
-                        disabled={product.stock === 0 || adding}
+                        disabled={product.stock === 0 || adding || showSuccess}
                     >
                         {adding ? (
                             <Loader2 size={18} className="animate-spin" />
+                        ) : showSuccess ? (
+                            <Check size={18} />
                         ) : (
                             <Plus size={18} />
                         )}
-                        {adding ? 'Adding...' : 'Cart'}
+                        {adding ? 'Adding...' : showSuccess ? 'Added!' : 'Cart'}
                     </button>
                 </div>
                 {product.stock < 10 && product.stock > 0 && (

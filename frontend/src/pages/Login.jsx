@@ -25,7 +25,7 @@ const Login = () => {
     };
 
     return (
-        <div className="container py-8">
+        <div className="container py-8 fade-in">
             <div className="auth-card">
                 <div className="auth-header">
                     <div className="auth-icon">

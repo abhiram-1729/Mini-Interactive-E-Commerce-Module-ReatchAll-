@@ -81,7 +81,7 @@ const UploadProduct = () => {
     }
 
     return (
-        <div className="container py-8">
+        <div className="container py-8 fade-in">
             <div className="auth-card upload-page-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
                 <div className="auth-header">
                     <div className="auth-icon" style={{ background: 'linear-gradient(135deg, var(--secondary-color), #f472b6)' }}>

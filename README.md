@@ -1,7 +1,7 @@
 # 🛍️ MiniStore - Professional MERN E-Commerce Platform
 
 
-MiniStore is a modern, full-stack e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js). It features a premium "Glassmorphism" design system, professional loading states, and a robust backend architecture.
+MiniStore is a modern, full-stack e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js). It features a premium "Glassmorphism" design system, professional loading states, and a robust backend architecture integrated with **Firebase Authentication**.
 
 ## 📸 Interface Preview
 
@@ -26,72 +26,88 @@ MiniStore is a modern, full-stack e-commerce application built with the MERN sta
 - **Product Discovery**: Advanced filtering by category and real-time search functionality.
 - **Detailed Product Views**: Comprehensive product information with image fallbacks and stock indicators.
 - **Dynamic Cart**: Real-time cart updates, quantity controls, and summary calculations.
-- **Secure Checkout**: Streamlined order placement flow.
+- **Unique Badge Count**: The cart icon badge displays the count of *unique* products, not the total quantity, for a cleaner UI.
+- **Secure Checkout**: Streamlined order placement with automatic cart clearing and notifications.
 
 ### 🔐 Backend & Security
-- **JWT Authentication**: Secure user login and registration.
+- **Firebase Authentication**: Industry-standard secure user management using Firebase SDK for both Frontend and Backend.
+- **MERN Synchronization**: Seamlessly syncs Firebase users with MongoDB to persist roles (Admin/User) and order history.
 - **Admin Dashboard**: Specialized access for product management and uploads.
-- **Image Uploads**: Centralized Multer configuration with previews and validation.
-- **RESTful API**: Clean, controller-based architecture for maintainable code.
+- **Image Uploads**: Centralized Multer configuration for product images.
+- **Dual Auth Support**: Backend middleware supports both Firebase ID tokens and legacy JWTs for smooth transitions.
 
 
 ## 🛠️ Technical Stack
 
-- **Frontend**: React, Vite, React Router, Lucide Icons, Vanilla CSS
-- **Backend**: Node.js, Express
+- **Frontend**: React, Vite, React Router, Firebase Client SDK, Lucide Icons, Vanilla CSS
+- **Backend**: Node.js, Express, Firebase Admin SDK
 - **Database**: MongoDB (Mongoose ODM)
-- **Auth**: JSON Web Tokens (JWT), BcryptJS
+- **Auth**: Firebase Authentication (ID Tokens)
 - **File Handling**: Multer
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v16+)
-- MongoDB (Local)
+- Node.js (v18+)
+- MongoDB (Running locally on `27017`)
+- Firebase Project (for Auth credentials)
 
 ### Setup & Installation
 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd basic-project
+   cd Mini-Web-Store
    ```
 
 2. **Backend Configuration**
-   Create a `.env` file in the `server` directory:
+   Create a `.env` file in the `backend/` directory:
    ```env
    PORT=5001
-   MONGO_URI=your_mongodb_uri
-   JWT_SECRET=your_secret_key
+   MONGO_URI=mongodb://localhost:27017/ecommerce
+   JWT_SECRET=your_legacy_secret
+   FIREBASE_PROJECT_ID=your-project-id
+   FIREBASE_CLIENT_EMAIL=your-client-email
+   FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYour\nKey\nHere\n-----END PRIVATE KEY-----\n"
    ```
 
-3. **Install Dependencies**
-   ```bash
-   # Frontend part
-   npm install
+3. **Frontend Configuration**
+   Update `frontend/src/firebase.js` with your Firebase web configuration (apiKey, authDomain, etc.).
 
-   # Backend part
-   cd server/
-   npm install
+4. **Install Dependencies**
+   ```bash
+   # From the root directory
+   npm run install-all # If a root script exists, otherwise:
+   
+   cd frontend && npm install
+   cd ../backend && npm install
    ```
 
-4. **Run the Application**
+5. **Seed Database**
    ```bash
-   # Run Backend (from /server)
+   cd backend
+   npm run data:import
+   ```
+
+6. **Run the Application**
+   ```bash
+   # In one terminal (Backend)
+   cd backend
    npm run dev
-
-   # Run Frontend (from /)
+   
+   # In another terminal (Frontend)
+   cd frontend
    npm run dev
    ```
 
 ## 📂 Project Structure
 
-- `server/controllers`: Business logic for handling requests.
-- `server/routes`: API endpoint definitions.
-- `server/middleware`: Auth and file upload configurations.
-- `src/components`: Reusable UI elements (Layout, Product, Cart, Common).
-- `src/pages`: Application views (Home, ProductDetails, Cart, etc.).
-- `src/context`: Global state management for Auth, Cart, and Products.
+- `backend/controllers`: API logic and user synchronization.
+- `backend/middleware`: Firebase auth verification and Multer setup.
+- `backend/models`: Mongoose schemas for User, Product, and Cart.
+- `frontend/src/components`: Reusable UI elements and layout.
+- `frontend/src/context`: Global state management for Firebase Auth and Cart.
+- `frontend/src/api`: Axios interceptors for handling Firebase tokens.
 
 ---
-* Built with ❤️ and developed by Abhiram Rangoon.*
+*Built with ❤️ and developed by Abhiram Rangoon.*
