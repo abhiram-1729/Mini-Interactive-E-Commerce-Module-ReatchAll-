@@ -10,6 +10,17 @@ const authUser = asyncHandler(async (req, res) => {
 
     const user = await User.findOne({ email });
 
+    // Handle Firebase Auth syncing
+    if (password === 'FIREBASE_AUTH' && user) {
+        return res.json({
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            token: generateToken(user._id), // Optional: Backend still identifies with this or Firebase token
+        });
+    }
+
     if (user && (await user.matchPassword(password))) {
         res.json({
             _id: user._id,
@@ -33,6 +44,16 @@ const registerUser = asyncHandler(async (req, res) => {
     const userExists = await User.findOne({ email });
 
     if (userExists) {
+        // If it's a Firebase sync, just return the user
+        if (password === 'FIREBASE_AUTH') {
+            return res.status(200).json({
+                _id: userExists._id,
+                name: userExists.name,
+                email: userExists.email,
+                isAdmin: userExists.isAdmin,
+                token: generateToken(userExists._id),
+            });
+        }
         res.status(400);
         throw new Error('User already exists');
     }
@@ -40,7 +61,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const user = await User.create({
         name,
         email,
-        password,
+        password: password === 'FIREBASE_AUTH' ? 'FIREBASE_AUTH_PLACEHOLDER' : password,
     });
 
     if (user) {
