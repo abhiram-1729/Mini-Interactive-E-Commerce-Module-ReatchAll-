@@ -24,20 +24,31 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (user) => {
             if (user) {
-                const token = await user.getIdToken();
-                const localUserInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
+                try {
+                    const token = await user.getIdToken();
+                    const localUserInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
 
-                // Only update from Firebase if we don't have local info or if the user changed
-                if (!localUserInfo || localUserInfo.email !== user.email) {
+                    // Always perform a background sync to ensure isAdmin status is up to date
+                    console.log('Syncing user profile for:', user.email);
+                    const { data } = await api.register(
+                        user.displayName || user.email.split('@')[0],
+                        user.email,
+                        "FIREBASE_AUTH"
+                    );
+
                     const updatedUserInfo = {
-                        ...localUserInfo,
-                        _id: user.uid,
-                        name: user.displayName || localUserInfo?.name || user.email.split('@')[0],
-                        email: user.email,
+                        ...data,
                         token: token
                     };
                     setUserInfo(updatedUserInfo);
                     localStorage.setItem('userInfo', JSON.stringify(updatedUserInfo));
+                } catch (err) {
+                    console.error('Error in onAuthStateChanged sync:', err);
+                    // If sync fails (e.g. backend down), we still set minimal info so they can browse
+                    // but some protected routes might fail later
+                    if (!userInfo) {
+                        setUserInfo({ email: user.email, token: await user.getIdToken() });
+                    }
                 }
             } else {
                 setUserInfo(null);
@@ -48,6 +59,27 @@ export const AuthProvider = ({ children }) => {
 
         return unsubscribe;
     }, []);
+
+    const refreshToken = async () => {
+        const user = auth.currentUser;
+        if (user) {
+            try {
+                const token = await user.getIdToken(true);
+                const localUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+                if (localUserInfo) {
+                    const updatedUserInfo = { ...localUserInfo, token };
+                    localStorage.setItem('userInfo', JSON.stringify(updatedUserInfo));
+                    setUserInfo(updatedUserInfo);
+                }
+                return token;
+            } catch (err) {
+                console.error('Error refreshing token:', err);
+                logout();
+                throw err;
+            }
+        }
+        return null;
+    };
 
     const login = async (email, password) => {
         setAuthActionLoading(true);
@@ -117,7 +149,8 @@ export const AuthProvider = ({ children }) => {
             error,
             login,
             register,
-            logout
+            logout,
+            refreshToken
         }}>
             {!initialLoading ? children : (
                 <div style={{

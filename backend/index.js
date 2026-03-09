@@ -28,9 +28,15 @@ app.get('/', (req, res) => {
 
 // Error middleware
 app.use((err, req, res, next) => {
-    const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
-    res.status(statusCode);
-    res.json({
+    console.error(`ERROR at ${req.method} ${req.path}:`, err.message);
+
+    // Multer file validation errors should return 400
+    let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+    if (err.status === 400 || err.code === 'LIMIT_FILE_SIZE' || err.code === 'LIMIT_UNEXPECTED_FILE') {
+        statusCode = 400;
+    }
+
+    res.status(statusCode).json({
         message: err.message,
         stack: process.env.NODE_ENV === 'production' ? null : err.stack,
     });

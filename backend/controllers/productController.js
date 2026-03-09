@@ -51,9 +51,19 @@ export const createProduct = async (req, res) => {
     try {
         const { name, description, price, category, stock } = req.body;
 
-        const image = req.file
-            ? `http://localhost:5001/uploads/${req.file.filename}`
-            : 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60';
+        let image = 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60';
+
+        if (req.file) {
+            // Cloudinary provides the URL in req.file.path
+            // Local diskStorage provides the filename in req.file.filename
+            if (req.file.path && req.file.path.startsWith('http')) {
+                image = req.file.path;
+            } else if (req.file.filename) {
+                // Determine the base URL from the request or use a default
+                const baseUrl = `${req.protocol}://${req.get('host')}`;
+                image = `${baseUrl}/uploads/${req.file.filename}`;
+            }
+        }
 
         const product = new Product({
             name,

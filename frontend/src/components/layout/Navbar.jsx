@@ -58,6 +58,7 @@ const Navbar = ({ onSearch }) => {
               </span>
               <button onClick={logout} className="logout-btn" title="Logout">
                 <LogOut size={20} />
+                <b>Exit</b>
               </button>
             </div>
           ) : (
