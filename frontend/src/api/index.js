@@ -19,11 +19,7 @@ export const register = (name, email, password) => api.post('/users', { name, em
 export const getProfile = () => api.get('/users/profile');
 
 // Product Management
-export const createProduct = (formData) => api.post('/products', formData, {
-    headers: {
-        'Content-Type': 'multipart/form-data'
-    }
-});
+export const createProduct = (formData) => api.post('/products', formData);
 
 // Add token to requests
 api.interceptors.request.use((config) => {

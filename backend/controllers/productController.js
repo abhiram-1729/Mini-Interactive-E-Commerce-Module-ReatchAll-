@@ -19,6 +19,7 @@ export const getProducts = async (req, res) => {
 
         const count = await Product.countDocuments({ ...keyword, ...category });
         const products = await Product.find({ ...keyword, ...category })
+            .sort({ createdAt: -1 })
             .limit(pageSize)
             .skip(pageSize * (page - 1));
 
