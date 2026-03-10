@@ -117,15 +117,6 @@ const ProductDetails = () => {
                     </div>
 
                     <div className="selection-actions">
-                        <div className="quantity-wrapper">
-                            <span>Quantity</span>
-                            <div className="quantity-selector-premium">
-                                <button>-</button>
-                                <span>1</span>
-                                <button>+</button>
-                            </div>
-                        </div>
-
                         <div className="purchase-row">
                             <button
                                 className={`add-to-cart-premium ${added ? 'added' : ''}`}
