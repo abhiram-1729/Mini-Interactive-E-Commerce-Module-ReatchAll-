@@ -54,7 +54,7 @@ const Navbar = ({ onSearch }) => {
             <div className="user-nav">
               <span className="user-name">
                 <User size={18} />
-                {userInfo.name ? userInfo.name.split(' ')[0] : 'User'}
+                <span>{userInfo.name ? userInfo.name.split(' ')[0] : 'User'}</span>
               </span>
               <button onClick={logout} className="logout-btn" title="Logout">
                 <LogOut size={20} />

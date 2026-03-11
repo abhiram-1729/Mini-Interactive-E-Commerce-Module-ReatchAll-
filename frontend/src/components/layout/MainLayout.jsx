@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const MainLayout = ({ children, onSearch }) => {
     return (
@@ -8,7 +9,7 @@ const MainLayout = ({ children, onSearch }) => {
             <main className="main-content">
                 {children}
             </main>
-            {/* Standard footer can be added here later */}
+            <Footer />
         </div>
     );
 };

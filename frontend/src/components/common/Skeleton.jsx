@@ -62,16 +62,16 @@ export const ProductDetailsSkeleton = () => (
 );
 
 export const CartItemSkeleton = () => (
-    <div className="cart-item fade-in" style={{ padding: '1.5rem' }}>
-        <div className="skeleton" style={{ width: '120px', height: '120px', borderRadius: '12px' }}></div>
-        <div className="item-details" style={{ flex: 1, marginLeft: '1.5rem' }}>
-            <div className="skeleton skeleton-title" style={{ width: '60%', height: '1.5rem', marginBottom: '0.75rem' }}></div>
-            <div className="skeleton skeleton-text" style={{ width: '30%', height: '1rem', marginBottom: '1.5rem' }}></div>
-            <div className="skeleton" style={{ width: '100px', height: '2.5rem', borderRadius: '10px' }}></div>
+    <div className="cart-item skeleton-cart-item fade-in">
+        <div className="skeleton" style={{ width: '100px', height: '100px', borderRadius: '12px' }}></div>
+        <div className="item-details">
+            <div className="skeleton skeleton-title" style={{ width: '60%' }}></div>
+            <div className="skeleton skeleton-text" style={{ width: '30%' }}></div>
+            <div className="skeleton skeleton-action" style={{ width: '100px', height: '2rem' }}></div>
         </div>
-        <div className="item-total" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'center', gap: '1rem' }}>
-            <div className="skeleton" style={{ width: '100px', height: '1.5rem' }}></div>
-            <div className="skeleton" style={{ width: '24px', height: '24px', borderRadius: '8px' }}></div>
+        <div className="item-total">
+            <div className="skeleton" style={{ width: '80px', height: '1.5rem' }}></div>
+            <div className="skeleton skeleton-circle" style={{ width: '24px', height: '24px' }}></div>
         </div>
     </div>
 );
